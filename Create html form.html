@@ -1,114 +1,178 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>greate html form</title>
+  <meta charset="UTF-8" />
+  <title>Simple Form</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      direction: ltr;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      width: 500px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: auto;
+      margin-left: 6px;
+    }
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+      margin-top: 15px;
+      padding: 8px 12px;
+      border: none;
+      background: #3498db;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    fieldset {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    legend {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <h1>Create html form</h1>
-    <hr>
+  <div class="container">
+    <h1 style="text-align:center;">Create HTML Form</h1>
+    <form>
+      <label for="text">Full Name:</label>
+      <input type="text" id="text" name="text" />
 
-        <label for="text">Name and surname:</label>
-        <input type="text" id="text"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
 
-        <label for="password">password:</label>
-        <input type="password" id="password"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
 
-        <label for="email">email:</label>
-        <input type="email" id="email"><<br><br>
+      <label for="tel">Phone:</label>
+      <input type="tel" id="tel" name="tel" />
 
-        <label for="tel">tel:</label>
-        <input type="tel" id="tel"><br><br>
+      <label for="url">Website URL:</label>
+      <input type="url" id="url" name="url" />
 
-        <label for="url">url:</label>
-        <input type="url" id="url"><br><br>
+      <label for="number">Lucky Number:</label>
+      <input type="number" id="number" name="number" />
 
-        <label for="number">lucky number:</label>
-        <input type="number" id="number"><br><br>
+      <label for="color">Color Selection:</label>
+      <input type="color" id="color" name="color" />
 
-        <label for="color">Color selection:</label>
-        <input type="color" id="color"><br><br>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" />
 
-        <label for="date">date:</label>
-        <input type="date" id="date"><br><br>
+      <label for="datetime-local">Local Date and Time:</label>
+      <input type="datetime-local" id="datetime-local" name="datetime-local" />
 
-        <label for="datetime-local">Local date and time:</label>
-        <input type="datetime-local" id="datetime-local"><br><br>
+      <label for="month">Month:</label>
+      <input type="month" id="month" name="month" />
 
-        <label for="month">month:</label>
-        <input type="month" id="month"><br><br>
+      <label for="week">Week:</label>
+      <input type="week" id="week" name="week" />
 
-        <label for="week">week:</label>
-        <input type="week" id="week"><br><br>
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" />
 
-        <label for="time">time:</label>
-        <input type="time" id="time"><br><br>
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search" />
 
-        <label for="search">search:</label>
-        <input type="search" id="search"><br><br>
+      <label>Gender:</label>
+      <input type="checkbox" id="woman" name="gender" value="woman" />
+      <label for="woman" style="display:inline;">Woman</label>
+      <input type="checkbox" id="man" name="gender" value="man" />
+      <label for="man" style="display:inline;">Man</label>
 
-        <label>Gender type:</label>
-        <input type="checkbox" value="1"> woman
-        <input type="checkbox" value="2"> man<br><br>
+      <br /><br />
 
-        <label>married or single:</label>
-        <input type="radio" value="a"> married
-        <input type="radio" value="b"> single<br><br>
+      <label>Marital Status:</label>
+      <input type="radio" id="married" name="marital" value="married" />
+      <label for="married" style="display:inline;">Married</label>
+      <input type="radio" id="single" name="marital" value="single" />
+      <label for="single" style="display:inline;">Single</label>
 
-        <label for="range">range:</label>
-        <input type="range" id="range" min="0" max="100"><br><br>
+      <label for="range">Range:</label>
+      <input type="range" id="range" name="range" min="0" max="100" />
 
-        <label for="file">your photo:</label>
-        <input type="file" id="file"><br><br>
+      <label for="file">Your Photo:</label>
+      <input type="file" id="file" name="file" />
 
-        <input type="hidden" value="مقدار مخفی">
+      <input type="hidden" name="hiddenField" value="hidden value" />
 
-        <label for="imgBtn">Select image:</label>
-        <input type="image" src="https://via.placeholder.com/50" alt="Select image" id="imgBtn"><br><br>
+      <label for="imgBtn">Select Image:</label><br />
+      <input type="image" src="https://via.placeholder.com/50" alt="Select image" id="imgBtn" name="imgBtn" />
 
-        <label for="button">button:</label>
-        <input type="button" value="click"><br><br>
+      <label for="button">Button:</label>
+      <input type="button" id="button" value="Click" />
 
-        <label for="submit">send:</label>
-        <input type="submit" value="Submit the form"><br><br>
+      <label for="submit">Send:</label>
+      <input type="submit" id="submit" value="Submit the form" />
 
-        <input type="reset" value="reset"><br><br>
+      <input type="reset" value="Reset" />
 
-        <fieldset>
-            <legend>Select information</legend>
-            <label for="select">select:</label>
-            <select id="select">
-                <option value="opt1"> ۱</option>
-                <option value="opt2"> ۲</option>
-            </select><br><br>
+      <fieldset>
+        <legend>Select Information</legend>
+        <label for="select">Select:</label>
+        <select id="select" name="select">
+          <option value="opt1">1</option>
+          <option value="opt2">2</option>
+        </select>
 
-            <label for="optgroupSelect">Selection by grouping:</label>
-            <select id="optgroupSelect">
-                <optgroup label="group ۱">
-                    <option> ۱-۱</option>
-                    <option> ۱-۲</option>
-                </optgroup>
-                <optgroup label="group ۲">
-                    <option> ۲-۱</option>
-                    <option> ۲-۲</option>
-                </optgroup>
-            </select>
-        </fieldset>
-        <br><br>
+        <label for="optgroupSelect">Grouped Selection:</label>
+        <select id="optgroupSelect" name="optgroupSelect">
+          <optgroup label="Group 1">
+            <option value="g1-1">1-1</option>
+            <option value="g1-2">1-2</option>
+          </optgroup>
+          <optgroup label="Group 2">
+            <option value="g2-1">2-1</option>
+            <option value="g2-2">2-2</option>
+          </optgroup>
+        </select>
+      </fieldset>
 
-        <label for="browser">Browser:</label>
-        <input list="browsers" id="browser">
-        <datalist id="browsers">
-            <option value="Chrome">
-            <option value="Firefox">
-            <option value="Edge">
-            <option value="Safari">
-        </datalist>
-        <br><br>
+      <label for="browser">Browser:</label>
+      <input list="browsers" id="browser" name="browser" />
+      <datalist id="browsers">
+        <option value="Chrome" />
+        <option value="Firefox" />
+        <option value="Edge" />
+        <option value="Safari" />
+      </datalist>
 
-        <label for="textarea">Description:</label>
-        <textarea id="textarea" rows="4" cols="40"></textarea><br><br
-
+      <label for="textarea">Description:</label>
+      <textarea id="textarea" name="textarea" rows="4" cols="40"></textarea>
     </form>
+  </div>
 </body>
 </html>
